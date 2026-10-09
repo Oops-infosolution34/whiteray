@@ -6,6 +6,7 @@ import sequelize from "./database/DB.js";
 
 import Course from "./models/course.js";
 
+
 import StudentFees from "./models/studentFees.js";
 import FeeInstallments from "./models/feeInstallments.js";
  
@@ -70,6 +71,7 @@ app.use(express.json());
 
 app.get("/erp", async (req, res) => {
     try {
+      
         const courses = await Course.findAll();
         res.status(200).json({
             success: true,

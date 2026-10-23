@@ -1,3 +1,4 @@
+//created by harminder
 /**
  * Formats a fee amount for display.
  * - If the value is a whole number, shows no decimal places (e.g., 15000 → "15000")

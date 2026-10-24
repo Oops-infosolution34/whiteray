@@ -5,6 +5,7 @@ import Login from "../models/login.js";
 
 export const getAdminDashboard = async (req, res) => {
   try {
+    
     const { id, role, organizationId } = req.user;
 
     if (role !== "admin" && role !== "superAdmin") {

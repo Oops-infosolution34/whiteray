@@ -9,6 +9,7 @@ export const assignOrganizationAdmin = async (req, res) => {
 
     if (!organizationId || !username || !password) {
       return res.status(400).json({ message: "All fields are required" });
+      
     }
 
 

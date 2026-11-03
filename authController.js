@@ -1,6 +1,7 @@
 //developed by Taranjit Singh
 
 import bcrypt from "bcryptjs";
+
 import jwt from "jsonwebtoken";
 import Login from "../models/login.js";
 import { Op } from "sequelize";
@@ -146,6 +147,8 @@ export const login = async (req, res) => {
         id: user.id,
         username: user.username,
         email: user.email,
+
+        
         role: user.role,
         organizationId: user.organizationId,
       },
@@ -156,6 +159,7 @@ export const login = async (req, res) => {
     res.status(500).json({
       message: "Error logging in",
       error: error.message,
+
     });
   }
 }; 
